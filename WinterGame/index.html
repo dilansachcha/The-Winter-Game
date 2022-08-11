@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>#TheWinterGame</title>
+    <link rel="stylesheet" href="style.css"/>
+
+</head>
+
+<body onload="createGroundBox() , createAirBox()" onkeyup="KeyCheck(event);">
+    <div class="background" id="background">
+
+        <img id="scoreboard" class="scoreboard" src="Island-game-gui/png/buttons/hover/medium.png"/>
+        <h3 class="scoreword">SCORE</h3>
+        <div id="score" class="score">0</div>
+
+        <img id="santa" class="santa" src="santa/Idle (1).png"/>
+
+        <h6 class="wintergame">#TheWinterGame</h6>
+        
+    </div>    
+
+        <div class="startGame" id="startGame">  
+            <h3 class="press">Press</h3>
+            <h4 class="tostartthegame">to Start the Game!</h4>
+            <img class="arrowkeys" src="output-onlinepngtools.png"/>
+            <h5 class="uparrow">Use the UP Arrow Key to JUMP</h5>
+            <h5 class="downarrow">Use the DOWN Arrow Key to SLIDE</h5>
+        </div>
+
+        <div id="endGame" class="endGame">
+            <span class="yourscore">YOU SCORED -</span>
+            <div class="endScore" id="endScore">0</div>
+            <button onclick="newGame();" class="newGame" id="newGame">New Game</button>
+        
+        </div>
+
+        <div id="youwon" class="youwon">
+            <div class="wontxt">Congratulations; You Just Won!</div>
+            <button onclick="newGame();" class="playagain">Play Again</button>
+        </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

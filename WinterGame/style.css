@@ -1,0 +1,345 @@
+body{
+    margin: 0px;
+}
+
+
+.background{
+    width: 100%;
+    height: 100vh;
+    background-image: url("Backgrounds/BG_03/BG_03.png");
+    background-size: cover;
+    background-repeat: repeat-x;
+    overflow: hidden;
+    position: absolute;
+    
+
+
+}
+
+.santa{
+    height: 200px;
+    position: absolute;
+    margin-top: 430px;
+    
+ 
+}
+
+.groundbox{
+    width: 50px;
+    height: 50px;
+    /* background-color: red; */
+    background-image: url("snowman.gif"); 
+    background-size: 50px 100%;
+    position: absolute;
+    margin-top: 560px;
+
+}
+
+.airbox{
+    width: 60px;
+    height: 60px;
+    /* background-color: black; */
+    background-image: url("crow.gif");
+    background-size: 60px 100%;
+    position: absolute;
+    margin-top: 400px;
+}
+
+.scoreboard{
+    width: 100px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 20px;
+    position: absolute;
+
+}
+
+.scoreword{
+
+    font-style: oblique;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+    font-size: small;
+    margin-top: 70px;
+    margin-left: 48px;
+    position: absolute;
+    color: rgb(227, 236, 236);
+
+}
+
+.score{
+    font-size: 50px;
+    font-weight: bolder;
+    margin-left: 30px;
+    margin-top: 16.5px;
+    font-family: "Arial";
+    position: absolute;
+    color: rgb(255, 255, 255);
+
+}
+
+.endGame{
+    width: 480px;
+    height: 480px;
+    background-image: url("gameover.gif");
+    background-repeat: repeat;
+    background-size: 480px 480px;
+    border: 10px;
+
+    position: absolute;
+    margin-top: 200px;
+    margin-left: 600px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.yourscore {
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-left: -330px;
+    margin-top: -65px;
+    animation:blinkingText 4.2s infinite;
+
+}
+
+
+@keyframes blinkingText{
+    0%{     color: #000;    }
+    49%{    color: #000; }
+    60%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: #000;    }
+}
+
+
+
+.endScore {
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-left: -185px;
+    margin-top: -65px;
+    animation:blinkingText 4.2s infinite;
+
+}
+
+
+.newGame , .playagain {
+    min-width: 100px;
+    min-height: 30px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: bolder;
+    color: #000000;
+    background: rgb(220, 20, 60);
+  background: linear-gradient(90deg, rgb(220, 20, 60) 0%, rgb(138, 4, 31) 100%);
+    border: none;
+    border-radius: 500px;
+    box-shadow: 6px 6px 12px #dacbcb;
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 5px;
+    margin-left: 350px;
+    }
+  
+  .newGame::before , .playagain::before {
+  content: '';
+    border-radius: 100px;
+    min-width: calc(100px + 6px);
+    min-height: calc(30px + 6px);
+    border: 3px solid #000000;
+    box-shadow: 0 0 60px #5e5a5a;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+  }
+  
+  .newGame:hover, .newGame:focus , .playagain:hover, .playagain:focus {
+    color: #161515;
+    transform: translateY(-3px);
+  }
+  
+  .newGame:hover::before, .newGame:focus::before , .playagain:hover::before, .playagain:focus::before {
+    opacity: 1;
+  }
+  
+  .newGame::after , .playagain::after {
+    content: '';
+    width: 15px; height: 15px;
+    border-radius: 100%;
+    border: 3px solid #000000;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+  }
+  
+  .newGame:hover::after, .newGame:focus::after , .playagain:hover::after, .playagain:focus::after{
+    animation: none;
+    display: none;
+  }
+  
+  @keyframes ring {
+    0% {
+      width: 15px;
+      height: 15px;
+      opacity: 1;
+    }
+    100% {
+      width: 150px;
+      height: 150px;
+      opacity: 0;
+    }
+  }
+
+.startGame{
+    visibility: visible;
+    position: absolute;
+    margin-left: 200px;
+    margin-top: 520px;
+    background-image: url("enter\ \(2\).gif");
+    width: 100px;
+    height: 50px;
+
+}
+
+.press{
+    margin-top: -20px;
+    position: absolute;
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+
+}
+
+.tostartthegame{
+    margin-top: 50px;
+    position: absolute;
+    font-weight: bolder;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.arrowkeys{
+    margin-left: 300px;
+    position: absolute;
+    
+}
+
+.uparrow{
+    margin-left: 400px;
+    margin-top: 10px;
+    white-space: nowrap;
+    position: absolute;
+    font-size: larger;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.downarrow{
+    margin-left: 400px;
+    margin-top: 50px;
+    white-space: nowrap;
+    position: absolute;
+    font-size: larger;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.wintergame {
+    position: absolute;
+    margin-left: 1180px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 4px;
+    overflow: hidden;
+    background: linear-gradient(90deg, rgb(210, 196, 221), rgb(131, 118, 161),rgb(202, 183, 231) );
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 3s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  }
+  
+  @keyframes animate {
+    0% {
+      background-position: -500%;
+    }
+    100% {
+      background-position: 500%;
+    }
+  }
+
+
+.playagain{
+  margin-top: -40px;
+  margin-left: 850px;
+}
+
+
+.youwon{
+  position: absolute;
+  margin-top: 480px;
+  margin-left: 200px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+}
+
+
+
+.wontxt{
+  font-weight: 800;
+  font-size: 70px;
+  line-height:65px;
+  letter-spacing: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 400%;
+  animation: move 5s ease infinite;
+  background-image: linear-gradient( 68.7deg,  rgb(138, 11, 53) 13.2%, rgba(137,149,250,1) 29.8%, rgba(229,109,212,1) 48.9%, rgba(255,68,128,1) 68.2%, rgb(0, 0, 0) 86.4% );
+}
+
+@keyframes move {
+  0%,100%{
+      background-position: 200% 0%;
+  }
+
+  50%{
+      background-position: 0% 200%;
+  }
+}
+
+
